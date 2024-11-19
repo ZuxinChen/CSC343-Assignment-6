@@ -15,7 +15,7 @@ void* Thread_1_writes(void* arg) {
 
     shared_data = 100;
     printf("Thread_1: Writing to shared data: %d\n", shared_data);
-    sleep(1);
+  
 
     pthread_mutex_unlock(&mutex);
 
@@ -28,7 +28,7 @@ void* Thread_2_reads(void* arg) {
     pthread_mutex_lock(&mutex);
 
     printf("Thread_2: Reading from shared data: %d\n", shared_data);
-    sleep(1);
+   
 
     pthread_mutex_unlock(&mutex);
 
